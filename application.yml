@@ -1,0 +1,25 @@
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+microservice:
+  popular-service:
+    endpoints:
+      endpoint:
+        uri: http://localhost:8989/popular
+
+  reservas-service:
+    endpoints:
+      endpoint:
+        uri: http://localhost:8989/reservas/convert
+
+
+company:
+  payment:
+    salary: 4000
